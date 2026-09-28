@@ -14,6 +14,15 @@ async function fetchFooter() {
     img.src = new URL(img.getAttribute('src'), resp.url).href;
     img.loading = 'lazy';
   });
+  wrapper.querySelectorAll('source[srcset]').forEach((source) => {
+    source.srcset = source.getAttribute('srcset').split(',').map((candidate) => {
+      const [url, ...descriptor] = candidate.trim().split(/\s+/);
+      return [new URL(url, resp.url).href, ...descriptor].join(' ');
+    }).join(', ');
+  });
+  // published fragments wrap list-item text in a paragraph; unwrap it so items read the
+  // same as the plain fragment (label text / link directly inside the <li>)
+  wrapper.querySelectorAll('li > p:first-child').forEach((para) => para.replaceWith(...para.childNodes));
   return wrapper;
 }
 
