@@ -1,0 +1,35 @@
+{
+  "variantName": "cards-related",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.brighthousefinancial.com/education/retirement-planning/5-things-to-consider-to-retire-early",
+    "blockPosition": "sidebar"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "related-articles",
+    "imagePattern": "thumbnail",
+    "structure": "thumbnail + linked title",
+    "position": "sidebar"
+  },
+  "contentPattern": {
+    "structure": "Cards: 1 row per card, 2 cells [square thumbnail image | paragraph with linked title]; single-column stack, typically inside a section styled 'related'",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["sidebar/related-content lists of bordered horizontal cards with square thumbnail and linked title + chevron"],
+    "notSuitableFor": ["multi-column card grids (use cards / cards-promo)", "icon feature rows (use cards-icon)"]
+  },
+  "options": [],
+  "memberVariantIds": ["cards-related"],
+  "usage": {
+    "pagesUsing": [{ "url": "https://www.brighthousefinancial.com/education/retirement-planning/5-things-to-consider-to-retire-early", "screenshot": "migration-work/screenshot.png" }],
+    "reuseCount": 2,
+    "lastUsed": "2026-09-25T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "variantName": "hero-article",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.brighthousefinancial.com/",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "featured-article",
+    "imagePattern": "background",
+    "structure": "background image + title + description + article card + CTA",
+    "hasBgImage": true,
+    "isFullWidth": true,
+    "position": "middle"
+  },
+  "contentPattern": {
+    "structure": "1 column: row 1 background image; row 2 H2, paragraph, eyebrow paragraph, linked H4 (featured article), CTA link (strong = primary button)",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["mid-page banner with background photo, heading, body copy, featured article card and primary button"],
+    "notSuitableFor": ["headline-only page-top heroes (use hero-headline)"]
+  },
+  "options": [],
+  "memberVariantIds": ["hero-article"],
+  "usage": {
+    "pagesUsing": [{ "url": "https://www.brighthousefinancial.com/", "screenshot": "migration-work/screenshot.png" }],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-25T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.brighthousefinancial.com/",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "product-overview",
+    "imagePattern": "icon",
+    "structure": "icon + label + description + CTA",
+    "hasGrid": true
+  },
+  "contentPattern": {
+    "structure": "Cards: 1 row per card, 2 cells [icon image | title, paragraph, CTA link]",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["2-up product/category overviews separated by a thin vertical divider"],
+    "notSuitableFor": ["3-up feature rows with linked titles (use cards-icon)", "photo-led cards"]
+  },
+  "options": [],
+  "memberVariantIds": ["cards-product"],
+  "usage": {
+    "pagesUsing": [{ "url": "https://www.brighthousefinancial.com/", "screenshot": "migration-work/screenshot.png" }],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-25T00:00:00.000Z"
+  }
+}

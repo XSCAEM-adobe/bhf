@@ -1,0 +1,278 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://www.brighthousefinancial.com/"
+      ],
+      "representativeUrl": "https://www.brighthousefinancial.com/",
+      "description": "Brighthouse Financial home page",
+      "blocks": [
+        {
+          "name": "hero-headline",
+          "instances": [
+            "section.section-container.large-padding.data-picture-rendition.bg-cover"
+          ]
+        },
+        {
+          "name": "cards-icon",
+          "instances": [
+            ".product-benefit-wrapper.imagebox-nocta-remove-margin .row:has(> .static-lockup-item)"
+          ]
+        },
+        {
+          "name": "columns-media",
+          "instances": [
+            "section.section-container.medium-padding .grid-x"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "#content > div > div.masterSectionContainer.section:nth-of-type(7) .grid-x:has(> .cell.hide-for-small-only.medium-2)"
+          ]
+        },
+        {
+          "name": "hero-article",
+          "instances": [
+            "section.overview-hero"
+          ]
+        },
+        {
+          "name": "columns-statement",
+          "instances": [
+            ".cmp-experiencefragment--mission-statement section.bg-lighter-gray .grid-x"
+          ]
+        }
+      ],
+      "urlPattern": "/",
+      "sections": [
+        {
+          "id": "rc7",
+          "name": "hero",
+          "selector": [
+            ".masterSectionContainer:has(> section.bg-cover.large-padding)",
+            "#content > div > div.masterSectionContainer.section:nth-of-type(2)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-headline"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc9",
+          "name": "product-benefits",
+          "selector": [
+            "#content > div > div.iconLockupStatic.section:nth-of-type(4)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc11",
+          "name": "income-calculator",
+          "selector": [
+            ".masterSectionContainer:has(> section.medium-padding)",
+            "#content > div > div.masterSectionContainer.section:nth-of-type(6)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-media"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc12",
+          "name": "our-products",
+          "selector": [
+            "#content > div > div.masterSectionContainer.section:nth-of-type(7)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "#content > div > div.masterSectionContainer.section:nth-of-type(7) h2"
+          ]
+        },
+        {
+          "id": "rc14",
+          "name": "education-feature",
+          "selector": [
+            ".educationOverviewHero"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-article"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc15",
+          "name": "explore-brighthouse",
+          "selector": [
+            "#content > div > div.iconLockupStatic.section:nth-of-type(10)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": [
+            ".iconLockupStatic .body-Slab-Large"
+          ]
+        },
+        {
+          "id": "rc17",
+          "name": "mission-statement",
+          "selector": [
+            ".cmp-experiencefragment--mission-statement .masterSectionContainer"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "columns-statement"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc18",
+          "name": "disclaimers",
+          "selector": [
+            ".cmp-experiencefragment--mission-statement .disclaimer",
+            "#content > div > div.disclaimer"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".cmp-experiencefragment--mission-statement .disclaimer .cmp-text",
+            "#content > div > div.disclaimer .cmp-text"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "education-article",
+      "urls": [
+        "https://www.brighthousefinancial.com/education/retirement-planning/5-things-to-consider-to-retire-early"
+      ],
+      "representativeUrl": "https://www.brighthousefinancial.com/education/retirement-planning/5-things-to-consider-to-retire-early",
+      "description": "Education article / content page (e.g. retirement planning articles)",
+      "blocks": [
+        {
+          "name": "hero-education",
+          "instances": [
+            "div:has(> section.education-hero-section)"
+          ]
+        },
+        {
+          "name": "cards-related",
+          "instances": [
+            ".articleDetailsContainer .large-pull-1 ul.articleCardList"
+          ]
+        },
+        {
+          "name": "share",
+          "instances": [
+            ".articleDetailsContainer .large-1 .cmp-experiencefragment--page-sharing"
+          ]
+        }
+      ],
+      "urlPattern": "/education/*/*",
+      "sections": [
+        {
+          "id": "rc7",
+          "name": "article-hero",
+          "selector": [
+            "div:has(> section.education-hero-section)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-education"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc9-share",
+          "name": "share",
+          "selector": [
+            ".articleDetailsContainer .large-1"
+          ],
+          "style": null,
+          "blocks": [
+            "share"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc9-updated",
+          "name": "article-updated-date",
+          "selector": [
+            ".articleDetailsContainer .medium-8.large-7 > div > .richText:first-child"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".articleDetailsContainer .medium-8.large-7 > div > .richText:first-child p"
+          ]
+        },
+        {
+          "id": "rc9-questions",
+          "name": "question-guide",
+          "selector": [
+            ".articleDetailsContainer .medium-8.large-7 .masterSectionContainer"
+          ],
+          "style": "question-guide",
+          "blocks": [],
+          "defaultContent": [
+            ".articleDetailsContainer .medium-8.large-7 .masterSectionContainer .question-guide"
+          ]
+        },
+        {
+          "id": "rc9-body",
+          "name": "article-body",
+          "selector": [
+            ".articleDetailsContainer .medium-8.large-7 .masterSectionContainer + .richText"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".articleDetailsContainer .medium-8.large-7 .richText .cmp-text"
+          ]
+        },
+        {
+          "id": "rc9-related",
+          "name": "related-content",
+          "selector": [
+            ".articleDetailsContainer .large-pull-1"
+          ],
+          "style": "related",
+          "blocks": [
+            "cards-related"
+          ],
+          "defaultContent": [
+            ".articleDetailsContainer .large-pull-1 .articleCardHead",
+            ".articleDetailsContainer .large-pull-1 a.tertiaryButton"
+          ]
+        },
+        {
+          "id": "rc9-disclaimer",
+          "name": "footnotes-disclaimer",
+          "selector": [
+            "#content .disclaimer.section"
+          ],
+          "style": "disclaimer",
+          "blocks": [],
+          "defaultContent": [
+            "#content .disclaimer.section .cmp-text"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}
