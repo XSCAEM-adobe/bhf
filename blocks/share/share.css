@@ -1,0 +1,59 @@
+/* share: horizontal row on small screens, vertical rail from 1200px */
+.share .share-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share .share-list > li {
+  margin: 0;
+  padding: 0;
+}
+
+.share .share-list > li::before {
+  content: none;
+}
+
+.share .share-label {
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+.share .share-item a:any-link {
+  display: block;
+  line-height: 0;
+}
+
+.share .share-item img {
+  width: 22px;
+  height: 22px;
+}
+
+@media (width >= 1200px) {
+  .share .share-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .share .share-list > .share-label {
+    padding-bottom: 15px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .share .share-list > .share-item {
+    height: 51px;
+    padding-left: 16px;
+  }
+
+  .share .share-item img {
+    width: 36px;
+    height: 36px;
+  }
+}

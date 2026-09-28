@@ -1,0 +1,189 @@
+/* full-bleed: undo the section content max-width / padding */
+.hero-education-container .hero-education-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* mobile (< 640px): centered text band, full-bleed photo */
+.hero-education {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.hero-education .hero-education-band {
+  width: 100%;
+  padding: 20px 0 30px;
+  box-sizing: border-box;
+  background-color: var(--brand-green);
+  color: #fff;
+  text-align: center;
+}
+
+.hero-education .hero-education-content {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* meta line: document icon + "4-Minute Article | Apr 24, 2018" */
+.hero-education .hero-education-meta {
+  margin: 15px 0 20px;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  opacity: 0.7;
+}
+
+.hero-education .hero-education-meta::before {
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin: -4px 6px 0 0;
+  vertical-align: middle;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17'%3E%3Cpath fill='%23fff' d='M1 1h12v15H1z'/%3E%3Cpath fill='%234cc35d' fill-opacity='.15' d='M3 3h8v7H3zm0 7h5v1H3z'/%3E%3Cpath fill='%234cc35d' fill-opacity='.25' d='M3 4h8v1H3zm0 2h8v1H3zm0 2h8v1H3zm0 2h4v1H3z'/%3E%3C/svg%3E") no-repeat;
+}
+
+.hero-education .hero-education-meta-item,
+.hero-education .hero-education-meta-sep {
+  display: inline-block;
+  line-height: 21px;
+}
+
+.hero-education .hero-education-meta-sep,
+.hero-education .hero-education-meta-sep + .hero-education-meta-item {
+  padding-left: 10px;
+}
+
+.hero-education .hero-education-content h1,
+.hero-education .hero-education-content h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.hero-education .hero-education-content .hero-education-subtitle {
+  margin: 0;
+  padding: 10px 0 20px;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+/* photo: second green band behind the top half of the photo */
+.hero-education .hero-education-media {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  margin-top: -30px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  line-height: 0;
+}
+
+.hero-education .hero-education-media::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 50%;
+  background-color: var(--brand-green);
+}
+
+.hero-education .hero-education-media picture {
+  display: block;
+  box-sizing: border-box;
+}
+
+.hero-education .hero-education-media img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (width >= 640px) {
+  .hero-education .hero-education-band {
+    padding: 30px 10px;
+    text-align: left;
+  }
+
+  .hero-education .hero-education-meta {
+    margin: 15px 0 0;
+  }
+
+  .hero-education .hero-education-content h1,
+  .hero-education .hero-education-content h2,
+  .hero-education .hero-education-content .hero-education-subtitle {
+    max-width: calc((100% + 30px) * 11 / 12 - 30px);
+  }
+
+  .hero-education .hero-education-content h1,
+  .hero-education .hero-education-content h2 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+
+  .hero-education .hero-education-content .hero-education-subtitle {
+    font-size: 21px;
+    line-height: 40px;
+  }
+
+  .hero-education .hero-education-media {
+    margin-top: -5px;
+    padding-top: 0;
+  }
+
+  .hero-education .hero-education-media picture {
+    padding: 0 30px;
+  }
+}
+
+@media (width >= 1024px) {
+  .hero-education .hero-education-band {
+    padding: 40px 0 30px;
+  }
+
+  .hero-education .hero-education-content {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .hero-education .hero-education-content h1,
+  .hero-education .hero-education-content h2,
+  .hero-education .hero-education-content .hero-education-subtitle {
+    max-width: calc((100% + 30px) * 5 / 6 - 30px);
+  }
+
+  .hero-education .hero-education-content h1,
+  .hero-education .hero-education-content h2 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+
+  .hero-education .hero-education-content .hero-education-subtitle {
+    padding-top: 0;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .hero-education .hero-education-media picture {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  .hero-education .hero-education-media img {
+    width: calc((100% + 30px) * 5 / 6 - 30px);
+  }
+}

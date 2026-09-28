@@ -1,0 +1,32 @@
+/* Brighthouse Financial brand tokens (extracted from www.brighthousefinancial.com) */
+:root {
+  /* colors */
+  --background-color: #fff;
+  --text-color: #333;
+  --link-color: #00465a;
+  --link-hover-color: #258dad;
+  --light-color: #f8f8f8;
+  --dark-color: #00465a;
+  --border-color: #c9c9c9;
+  --card-border-color: #8d8d8d;
+  --brand-green: #4cc35d;
+  --brand-teal: #00b0b9;
+  --brand-lime: #97d700;
+  --brand-gradient: linear-gradient(
+    to right,
+    var(--brand-teal) 0%,
+    var(--brand-teal) 33%,
+    var(--brand-green) 33%,
+    var(--brand-green) 65%,
+    var(--brand-lime) 65%,
+    var(--brand-lime) 100%
+  );
+
+  /* fonts */
+  --heading-font-family: roboto, roboto-fallback, sans-serif;
+  --body-font-family: 'Roboto Slab', roboto-slab-fallback, serif;
+
+  /* layout */
+  --content-max-width: 1280px;
+  --section-padding: 40px;
+}

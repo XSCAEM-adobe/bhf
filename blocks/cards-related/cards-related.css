@@ -1,0 +1,112 @@
+/* related-articles rail: stacked bordered cards, square thumbnail left + linked title right */
+.cards-related > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* reset global `main ul > li` bullet styling; card box from source .redirectable-card */
+.cards-related .cards-related-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 89px 1fr;
+  column-gap: 10px;
+  align-items: start;
+  box-sizing: border-box;
+  min-height: 90px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--card-border-color);
+  background-color: var(--background-color);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cards-related .cards-related-card::before {
+  content: none;
+}
+
+.cards-related .cards-related-card:hover,
+.cards-related .cards-related-card:focus-within {
+  box-shadow: 5px 5px 0 0 var(--border-color);
+}
+
+.cards-related .cards-related-card.cards-related-card-no-image {
+  grid-template-columns: 1fr;
+}
+
+/* source thumbnail is 89px square inside a 90px (88px inner) card: bottom 1px is clipped */
+.cards-related .cards-related-card-image {
+  width: 89px;
+  height: 89px;
+  margin-bottom: -1px;
+  line-height: 0;
+}
+
+.cards-related .cards-related-card-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-related .cards-related-card-image img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.cards-related .cards-related-card-body {
+  padding: 10px 10px 10px 0;
+}
+
+.cards-related .cards-related-card-no-image .cards-related-card-body {
+  padding-left: 10px;
+}
+
+.cards-related .cards-related-card-body > * {
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.cards-related .cards-related-card-body > * + * {
+  margin-top: 10px;
+}
+
+.cards-related a.cards-related-card-link:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.cards-related a.cards-related-card-link:hover {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* whole card is clickable (source .redirectable-card) */
+.cards-related a.cards-related-card-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+/* chevron after the title (source sprite: 12x16 box, margin 0 0 -3px 3px) */
+.cards-related a.cards-related-card-link::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 16px;
+  margin: 0 0 -3px 3px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='16' viewBox='0 0 12 16'%3E%3Cpath d='M1.3 2.6 7 7.8l-5.7 5.2' fill='none' stroke='%2300465a' stroke-width='2.3'/%3E%3C/svg%3E") no-repeat 0 0;
+}
+
+/* tablet: source switches to compact cards (61px thumbnail, 10px/15px title, 14px gap) */

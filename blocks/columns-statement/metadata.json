@@ -1,0 +1,35 @@
+{
+  "variantName": "columns-statement",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.brighthousefinancial.com/",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "dense",
+    "purpose": "trust-statement",
+    "imagePattern": "icon",
+    "structure": "logo + statement text",
+    "sectionStyle": "grey"
+  },
+  "contentPattern": {
+    "structure": "Columns: 1 row, 2 cells [logo image | paragraph with <sup>]",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["small logo mark beside a large mission/trust statement, typically in a grey section band"],
+    "notSuitableFor": ["text + large illustration splits (use columns-media)"]
+  },
+  "options": [],
+  "memberVariantIds": ["columns-statement"],
+  "usage": {
+    "pagesUsing": [{ "url": "https://www.brighthousefinancial.com/", "screenshot": "migration-work/screenshot.png" }],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-25T00:00:00.000Z"
+  }
+}

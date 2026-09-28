@@ -1,20 +1,256 @@
+/* stylelint-disable no-descending-specificity */
+
+/* footer: mobile first, desktop from 900px */
 footer {
   background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  color: var(--text-color);
+  font-family: var(--heading-font-family);
+  font-size: 15px;
+  line-height: 22.5px;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer-inner {
+  box-sizing: border-box;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 60px 15px;
+}
+
+footer .footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 footer .footer p {
   margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+footer .footer a:any-link {
+  color: #00465a;
+}
+
+footer .footer a:hover {
+  text-decoration: none;
+}
+
+/* bands separated by thin rules */
+footer .footer-band + .footer-band {
+  border-top: 1px solid #ddd;
+  padding-top: 35px;
+}
+
+/* heading-led link columns (stacked on mobile) */
+footer .footer-columns {
+  display: grid;
+  gap: 15px;
+  padding-bottom: 51px;
+}
+
+footer .footer-column h6 {
+  margin: 0 0 30px;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+footer .footer-column li {
+  margin-bottom: 15px;
+  line-height: 26px;
+}
+
+footer .footer-column a:any-link,
+footer .footer-links a:any-link,
+footer .footer-inline a:any-link {
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+footer .footer-column a:hover,
+footer .footer-links a:hover,
+footer .footer-inline a:hover {
+  border-bottom-color: #00465a;
+}
+
+footer .footer-column:first-child ul {
+  padding-left: 35px;
+}
+
+/* icon grid (social links): two labelled columns on mobile */
+footer .footer .footer-icon-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 0;
+}
+
+footer .footer .footer-icon-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 0;
+  line-height: 26px;
+}
+
+footer .footer-icon-list a:any-link {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+}
+
+footer .footer-icon-list img {
+  width: auto;
+  height: 26px;
+}
+
+/* external-link icon */
+footer .footer-external-icon {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-left: 8px;
+  background-color: currentcolor;
+  vertical-align: 2px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' fill='none' stroke='%23000' stroke-width='1.8'%3E%3Cpath d='M6 2H2v10h10V8'/%3E%3Cpath d='M8 1h5v5M13 1 6.5 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* "Also of Interest" (stacked on mobile) */
+footer .footer-inline {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+footer .footer .footer-inline-label {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+}
+
+footer .footer-inline li {
+  line-height: 40px;
+}
+
+/* legal links (one per row on mobile) */
+footer .footer-links {
+  padding-bottom: 21px;
+}
+
+footer .footer-links li {
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+/* logo + legal copy (stacked on mobile) */
+footer .footer-brand {
+  display: grid;
+  gap: 20px;
+}
+
+footer .footer-brand-logo {
+  padding: 25px 0;
+}
+
+footer .footer-brand-logo img {
+  display: block;
+  width: 144px;
+  height: auto;
+}
+
+footer .footer-brand-text p {
+  margin-top: 15px;
+}
+
+footer .footer-brand-text a:any-link {
+  border-bottom: 1px solid currentcolor;
+}
+
+footer .footer-brand-text a:hover {
+  background-color: #d9e3e6;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-inner {
+    padding: 80px 50px;
+  }
+
+  footer .footer-columns {
+    grid-template-columns: 4fr 4fr 3fr 1fr;
+    gap: 0;
+    padding-bottom: 20px;
+  }
+
+  footer .footer-column + .footer-column {
+    padding-left: 15px;
+  }
+
+  footer .footer-column h6 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  /* icon-only grid on desktop; labels stay available to screen readers */
+  footer .footer .footer-icon-list {
+    grid-template-columns: repeat(3, 50px);
+    gap: 20px;
+  }
+
+  footer .footer .footer-icon-list li {
+    display: block;
+    line-height: 0;
+  }
+
+  footer .footer-icon-list a:any-link {
+    display: inline-block;
+  }
+
+  footer .footer-icon-list img {
+    width: 48px;
+    height: 42px;
+  }
+
+  footer .footer-icon-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  footer .footer-inline {
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0 20px;
+    padding: 0 0 0 35px;
+  }
+
+  footer .footer-inline ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+  }
+
+  footer .footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 15px;
+  }
+
+  footer .footer-links li {
+    padding-right: 25px;
+  }
+
+  footer .footer-brand {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  footer .footer-brand-logo {
+    padding: 25px 0 0;
   }
 }

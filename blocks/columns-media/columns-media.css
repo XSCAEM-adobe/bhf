@@ -1,0 +1,128 @@
+/* columns-media: text column (5/12) beside an illustration column (7/12) */
+
+.columns-media .columns-media-row {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -15px;
+}
+
+.columns-media .columns-media-text,
+.columns-media .columns-media-image {
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+
+.columns-media .columns-media-row > div + div {
+  margin-top: 20px;
+}
+
+/* text column */
+.columns-media .columns-media-text h2,
+.columns-media .columns-media-text h3 {
+  margin: 0;
+  padding: 20px 0 10px;
+  font-size: 27px;
+  line-height: 35px;
+}
+
+.columns-media .columns-media-text p {
+  margin: 15px 0 0;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.columns-media .columns-media-text > :last-child {
+  margin-bottom: 16px;
+}
+
+main .columns-media a.button:any-link {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+/* image column */
+.columns-media .columns-media-image {
+  line-height: 0;
+  text-align: right;
+}
+
+.columns-media .columns-media-image picture {
+  display: block;
+  margin: 13px 0 16px;
+}
+
+.columns-media .columns-media-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (width >= 600px) {
+  .columns-media .columns-media-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .columns-media .columns-media-row > div + div {
+    margin-top: 0;
+  }
+
+  .columns-media .columns-media-text {
+    flex: 0 0 41.6667%;
+    max-width: 41.6667%;
+  }
+
+  .columns-media .columns-media-image {
+    flex: 0 0 58.3333%;
+    max-width: 58.3333%;
+  }
+
+  .columns-media .columns-media-text h2,
+  .columns-media .columns-media-text h3 {
+    padding-top: 40px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
+  .columns-media .columns-media-text p {
+    margin-top: 18px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .columns-media .columns-media-text > :last-child {
+    margin-bottom: 18px;
+  }
+
+  main .columns-media a.button:any-link {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .columns-media .columns-media-image picture {
+    margin: 16px 0;
+  }
+}
+
+@media (width >= 900px) {
+  .columns-media .columns-media-text h2,
+  .columns-media .columns-media-text h3 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .columns-media .columns-media-text p {
+    margin-top: 20px;
+    font-size: var(--body-font-size-m);
+    line-height: var(--body-line-height-m);
+  }
+
+  .columns-media .columns-media-text > :last-child {
+    margin-bottom: 20px;
+  }
+
+  main .columns-media a.button:any-link {
+    font-size: 20px;
+    line-height: 35px;
+  }
+}

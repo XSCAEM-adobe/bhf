@@ -1,0 +1,35 @@
+{
+  "variantName": "columns-media",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "version": "1.0.0",
+  "created": "2026-09-25T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.brighthousefinancial.com/",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "promo-split",
+    "imagePattern": "large",
+    "structure": "heading + description + CTA + image",
+    "hasGrid": true
+  },
+  "contentPattern": {
+    "structure": "Columns: 1 row, 2 cells [H2/H3 heading, paragraph, CTA link | image]",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": ["text + illustration split promos (~45/55) with a single text-link CTA"],
+    "notSuitableFor": ["small logo + statement rows (use columns-statement)", "multi-column text grids"]
+  },
+  "options": [],
+  "memberVariantIds": ["columns-media"],
+  "usage": {
+    "pagesUsing": [{ "url": "https://www.brighthousefinancial.com/", "screenshot": "migration-work/screenshot.png" }],
+    "reuseCount": 1,
+    "lastUsed": "2026-09-25T00:00:00.000Z"
+  }
+}

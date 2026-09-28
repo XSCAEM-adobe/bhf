@@ -1,0 +1,108 @@
+/* columns-statement: logo mark beside a mission/trust statement (grey band).
+ * Section background and 20px band padding come from section style "light-grey".
+ * Grid geometry mirrors the source 12-column grid (15px cell gutters).
+ */
+
+.columns-statement {
+  margin: 0 -15px;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+}
+
+.columns-statement .columns-statement-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.columns-statement .columns-statement-logo,
+.columns-statement .columns-statement-text {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 0 15px;
+}
+
+/* logo is hidden on small screens (source: hide-for-small-only) */
+.columns-statement .columns-statement-logo {
+  display: none;
+  line-height: 0;
+}
+
+.columns-statement .columns-statement-logo picture {
+  display: block;
+}
+
+.columns-statement .columns-statement-logo img {
+  display: inline-block;
+  width: 80%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.columns-statement .columns-statement-text {
+  width: 100%;
+  margin: 10px 0 16px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.columns-statement .columns-statement-text p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.columns-statement .columns-statement-text sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+@media (width >= 640px) {
+  .columns-statement {
+    margin: 0 -5px;
+  }
+
+  .columns-statement .columns-statement-logo {
+    display: block;
+    width: calc(100% * 2 / 12);
+    padding-top: 14px;
+    text-align: left;
+  }
+
+  .columns-statement .columns-statement-text {
+    width: calc(100% * 9 / 12);
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+}
+
+/* global section gutter grows to 50px at 900px; source grid stays at 25px until 1024px */
+@media (width >= 900px) {
+  .columns-statement {
+    margin: 0 -40px;
+  }
+}
+
+@media (width >= 1024px) {
+  .columns-statement {
+    margin: 0 -15px;
+  }
+
+  .columns-statement .columns-statement-logo {
+    width: calc(100% / 12);
+    padding-top: 16px;
+    text-align: center;
+  }
+
+  .columns-statement .columns-statement-text {
+    width: calc(100% * 10 / 12);
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 35px;
+  }
+}

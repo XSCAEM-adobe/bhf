@@ -1,0 +1,196 @@
+/* cards-icon: centered 3-up feature row (icon, linked title, description, text-link CTA) */
+
+/* section margin (40px) + block padding = source section padding-top 60 / 70 / 80 */
+.cards-icon {
+  padding: 20px 0;
+}
+
+.cards-icon > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 60px;
+}
+
+/* reset global bullet-list styling (main ul > li) */
+.cards-icon .cards-icon-card {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cards-icon .cards-icon-card::before {
+  content: none;
+}
+
+.cards-icon .cards-icon-card-image {
+  line-height: 0;
+  margin-bottom: 20px;
+}
+
+.cards-icon .cards-icon-card-image img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.cards-icon .cards-icon-card-body {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  flex: 1;
+  min-width: 0;
+}
+
+.cards-icon .cards-icon-card-body h3 {
+  margin: 0 0 5px;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  color: var(--text-color);
+}
+
+.cards-icon .cards-icon-card-body h3 a:any-link {
+  color: var(--link-color);
+}
+
+.cards-icon .cards-icon-card-body p {
+  margin: 0;
+  padding: 0 0 15px;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  line-height: 25px;
+  color: var(--text-color);
+}
+
+.cards-icon .cards-icon-card-body .cards-icon-card-cta {
+  margin-top: auto;
+  padding: 0;
+  max-width: 100%;
+  font-size: var(--body-font-size-s);
+  line-height: 24px;
+}
+
+/* long CTA labels must wrap inside the card instead of overflowing the viewport */
+.cards-icon .cards-icon-card-cta .button {
+  white-space: normal;
+}
+
+/* labelled row: centered intro label ("Explore Brighthouse Financial") above the cards */
+.cards-icon-container > .default-content-wrapper {
+  padding-top: 20px;
+}
+
+.cards-icon-container > .default-content-wrapper p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+}
+
+.cards-icon-container > .default-content-wrapper p strong {
+  font-weight: 400;
+}
+
+.default-content-wrapper + .cards-icon-wrapper > .cards-icon {
+  padding-top: 40px;
+}
+
+@media (width >= 640px) {
+  .cards-icon {
+    padding: 30px 0 20px;
+  }
+
+  .cards-icon > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cards-icon .cards-icon-card {
+    padding: 0 15px;
+  }
+
+  .cards-icon .cards-icon-card-image img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cards-icon .cards-icon-card-body h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .cards-icon .cards-icon-card-body p {
+    padding-bottom: 20px;
+    font-size: var(--body-font-size-xs);
+  }
+
+  .cards-icon-container > .default-content-wrapper {
+    padding-top: 30px;
+  }
+
+  .cards-icon-container > .default-content-wrapper p {
+    margin-bottom: 30px;
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  /* labelled row: no card gutter, inset list */
+  .default-content-wrapper + .cards-icon-wrapper > .cards-icon > ul {
+    padding: 0 10px;
+  }
+
+  .default-content-wrapper + .cards-icon-wrapper > .cards-icon .cards-icon-card {
+    padding: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .cards-icon {
+    padding: 40px 0;
+  }
+
+  .cards-icon > ul {
+    padding: 0 20px;
+  }
+
+  .cards-icon .cards-icon-card-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cards-icon .cards-icon-card-body h3 {
+    font-size: 22px;
+  }
+
+  /* source h6 margin-bottom (5px) collapses into p margin-top (15px); flex does not collapse */
+  .cards-icon .cards-icon-card-body p {
+    margin-top: 10px;
+  }
+
+  .cards-icon-container > .default-content-wrapper {
+    padding-top: 40px;
+  }
+
+  .cards-icon-container > .default-content-wrapper p {
+    margin-bottom: 40px;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  .default-content-wrapper + .cards-icon-wrapper > .cards-icon > ul {
+    padding: 0 35px;
+  }
+
+  .default-content-wrapper + .cards-icon-wrapper > .cards-icon .cards-icon-card {
+    padding: 0 50px;
+  }
+}
